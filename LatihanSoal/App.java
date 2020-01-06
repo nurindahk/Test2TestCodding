@@ -40,14 +40,18 @@ public class App {
             }
 
             lamaparkir=jkeluar-jmasuk;
-            System.out.println("Lama Parkir: "+lamaparkir+" Jam");
+
+
             if(lamaparkir==1){
                 total = biayaparkir;
 
             }
             else if(lamaparkir>1){
                 total = biayaparkir+((lamaparkir-1)*biayaparkirnext);
-
+            }
+            else if (lamaparkir==0){
+                lamaparkir = 1;
+                total = biayaparkir;
             }
             System.out.println("Terimakasih telah melakukan transaksi dengan rincian sebagai berikut ");
             System.out.println("Plat Nomer : " +plat);
